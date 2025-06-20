@@ -1,143 +1,511 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
+    <meta name="facebook-domain-verification" content="c0z3wj7tx21utk9ui397udyqrzedrb" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L7GCBT76BZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-L7GCBT76BZ');
+    </script>
+    <!-- Meta Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '567660276401151');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=567660276401151&ev=PageView&noscript=1"
+    /></noscript>
+    <script>
+        
+  document.addEventListener('DOMContentLoaded', function() {
+        var whatsappButtons = document.querySelectorAll('.whatsapp-cta-button'); 
+
+        whatsappButtons.forEach(function(button) {
+          if (button) {
+            button.addEventListener('click', function() {
+              if (typeof fbq === 'function') {
+                fbq('track', 'Contact', {
+                  content_name: 'WhatsApp Contact',
+                  content_category: 'Botón'
+                });
+                console.log('Meta Pixel: Evento Lead disparado por clic en WhatsApp.');
+              } else {
+                console.warn('Meta Pixel no cargado. No se pudo disparar el evento Lead.');
+              }
+            });
+          }
+        });
+      });
+    </script>
+<!-- End Meta Pixel Code -->
+    <!-- Meta Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '948705430576077');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=948705430576077&ev=PageView&noscript=1"
+    /></noscript>
+<!-- End Meta Pixel Code -->
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="facebook-domain-verification" content="hel4p4t0tz2hibvxjxggdxbi376mem" />
-    <title>Aurora Tech Solutions</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Envíenos mensaje | Juega con Confianza</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --dark-bg: #1E272C; /* Fondo oscuro, similar a WhatsApp */
+            --whatsapp-green: #25D366; /* Verde principal de WhatsApp */
+            --whatsapp-green-lighter: #128C7E; /* Verde más claro para toques */
+            --text-light: #FFFFFF;
+            --text-dark: #333333;
+            --border-color-dark: #3B4A50;
+            --button-hover-green: #15803d; /* Verde más oscuro al hacer hover */
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* --- Fixed Header --- */
+        .fixed-header {
+            background-color: var(--dark-bg);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            border-bottom: 2px solid var(--whatsapp-green); /* Toque verde */
+        }
+
+        .fixed-header .logo {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .fixed-header .whatsapp-button-small-fixed {
+            background-color: var(--whatsapp-green);
+            color: var(--text-light);
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.9em;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .fixed-header .whatsapp-button-small-fixed:hover {
+            background-color: var(--button-hover-green);
+            transform: translateY(-2px);
+        }
+
+        main {
+            padding-top: 80px; /* Space for fixed header */
+        }
+
+        /* --- Hero and Main CTA Section (Combined) --- */
+        .hero-cta-section {
+            background: linear-gradient(135deg, var(--dark-bg) 0%, #15202B 100%); /* Degradado sutil */
+            padding: 80px 0;
+            text-align: center;
+            color: var(--text-light);
+            animation: fadeIn 1s ease-out;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra interna para profundidad */
+            border-bottom: 3px solid var(--whatsapp-green); /* Toque verde */
+        }
+
+        .hero-cta-section h1 {
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--whatsapp-green); /* Título en verde */
+        }
+
+        .hero-cta-section p {
+            font-size: 1.5em;
+            margin-top: 0;
+            font-weight: 400;
+            margin-bottom: 40px;
+        }
+
+        .whatsapp-button {
+            display: inline-block;
+            background-color: var(--whatsapp-green);
+            color: var(--text-light);
+            padding: 18px 40px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 1.8em;
+            font-weight: 700;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 6px 12px rgba(37, 211, 102, 0.5); /* Sombra verde */
+            text-transform: uppercase;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-button:hover {
+            background-color: var(--button-hover-green);
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 8px 16px rgba(37, 211, 102, 0.6);
+            animation: none;
+        }
+
+        .whatsapp-button i {
+            margin-right: 10px;
+        }
+
+        /* --- General Section Styling --- */
+        .section {
+            padding: 60px 0;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color-dark); /* Borde más oscuro */
+            background-color: var(--dark-bg); /* Fondo oscuro */
+            animation: fadeIn 1s ease-out;
+            animation-timeline: view();
+            animation-range: entry 0% cover 30%;
+        }
+        .section:last-of-type {
+            border-bottom: none;
+        }
+
+        .section h2 {
+            font-size: 2.5em;
+            color: var(--whatsapp-green); /* Títulos en verde */
+            margin-bottom: 40px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        /* --- Benefits Section (Streamlined) --- */
+        .benefits-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px; /* Reducir gap para compactar */
+            margin-top: 30px;
+        }
+
+        .benefit-item {
+            background-color: #263238; /* Gris oscuro para las tarjetas */
+            padding: 25px; /* Reducir padding */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            flex: 1;
+            min-width: 250px;
+            max-width: 30%;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.3s ease;
+            color: var(--text-light);
+        }
+
+        .benefit-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .benefit-item i {
+            font-size: 2.5em; /* Reducir tamaño del icono */
+            color: var(--whatsapp-green); /* Iconos en verde */
+            margin-bottom: 10px; /* Reducir margen */
+        }
+
+        .benefit-item h3 {
+            font-size: 1.3em; /* Reducir tamaño del título */
+            color: var(--whatsapp-green); /* Títulos en verde */
+            margin-bottom: 8px;
+        }
+
+        .benefit-item p {
+            font-size: 0.95em; /* Reducir tamaño del párrafo */
+            text-align: center;
+        }
+
+        /* --- Testimonials (Simplified) --- */
+        .testimonials .data-point {
+            background-color: #263238;
+            padding: 25px 30px; /* Reducir padding */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            margin-bottom: 25px; /* Margen para cuando estén apilados en móvil */
+            color: var(--text-light);
+        }
+
+        .testimonials .data-point h3 {
+            font-size: 2.5em; /* Reducir tamaño del número */
+            color: var(--whatsapp-green); /* Número en verde */
+            margin-bottom: 8px;
+        }
+
+        .testimonials .data-point p {
+            font-size: 1em; /* Reducir tamaño del texto */
+            margin-top: 0;
+        }
+
+        .testimonials .data-point .trustpilot-rating {
+            font-size: 1.3em; /* Reducir tamaño */
+        }
+
+        .testimonials .data-point .trustpilot-rating .fa-star {
+            color: gold;
+        }
+        
+        /* Removed client-quote to shorten */
+
+        /* --- Promotions (Simplified - One Item Focus) --- */
+        .promotions .promo-item {
+            background-color: #263238;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            max-width: 500px; /* Limitar ancho para que no se extienda demasiado en desktop */
+            margin: 0 auto; /* Centrar el item */
+            text-align: center;
+            transition: transform 0.3s ease;
+            color: var(--text-light);
+        }
+        
+        .promotions .promo-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .promotions .promo-item h3 {
+            font-size: 2em;
+            color: var(--whatsapp-green); /* Título en verde */
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .promotions .promo-item p {
+            font-size: 1.1em;
+            margin-bottom: 25px;
+        }
+
+        .promotions .promo-item .whatsapp-button-small {
+            background-color: var(--whatsapp-green);
+            color: var(--text-light);
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .promotions .promo-item .whatsapp-button-small:hover {
+            background-color: var(--button-hover-green);
+            transform: translateY(-2px);
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.9em;
+            margin-top: 50px;
+            border-top: 2px solid var(--whatsapp-green); /* Toque verde */
+        }
+
+        /* --- Keyframe Animations --- */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 6px 12px rgba(37, 211, 102, 0.5); }
+            50% { transform: scale(1.05); box-shadow: 0 8px 16px rgba(37, 211, 102, 0.6); }
+            100% { transform: scale(1); box-shadow: 0 6px 12px rgba(37, 211, 102, 0.5); }
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 768px) {
+            .fixed-header .logo { font-size: 1.2em; }
+            .fixed-header .whatsapp-button-small-fixed { padding: 8px 15px; font-size: 0.8em; }
+            main { padding-top: 70px; }
+
+            .hero-cta-section h1 { font-size: 2.5em; }
+            .hero-cta-section p { font-size: 1.2em; }
+            .whatsapp-button { font-size: 1.5em; padding: 15px 30px; }
+            
+            .section h2 { font-size: 2em; }
+
+            .benefit-item { max-width: 48%; /* Dos columnas */ margin-bottom: 20px; }
+            .benefits-grid { flex-direction: row; justify-content: center; } /* Mantener en fila si es posible */
+
+            .testimonials .data-point,
+            .promotions .promo-item { max-width: 100%; margin-bottom: 20px; }
+            .testimonials .testimonial-content { flex-direction: column; align-items: center; }
+        }
+
+        @media (max-width: 480px) {
+            .fixed-header { flex-direction: column; padding: 10px; }
+            .fixed-header .logo { margin-bottom: 10px; }
+             .fixed-header .whatsapp-button-small-fixed {
+                padding: 8px 12px; /* Reduce el padding para hacerlo más compacto */
+                font-size: 0.75em; /* Reduce el tamaño de la fuente un poco más */
+                width: auto; /* Asegura que no intente ocupar todo el ancho disponible */
+                max-width: fit-content; /* Limita su ancho al contenido */
+                margin: 0 auto; /* Centra el botón si hay espacio, o lo mantiene al centro en modo columna */
+            }
+            main { padding-top: 100px; }
+
+            .hero-cta-section h1 { font-size: 2em; }
+            .hero-cta-section p { font-size: 1em; }
+            .whatsapp-button { font-size: 1.2em; padding: 12px 25px; }
+            
+            .section { padding: 40px 0; }
+            .section h2 { font-size: 1.8em; }
+
+            .benefit-item { max-width: 100%; } /* Una columna */
+            .benefits-grid { flex-direction: column; }
+
+            .testimonials .data-point h3 { font-size: 2.5em; }
+            .testimonials .data-point p { font-size: 1em; }
+            .promotions .promo-item h3 { font-size: 1.5em; }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">Aurora Tech</div>
-            <nav>
-                <ul>
-                    <li><a href="#services">Servicios</a></li>
-                    <li><a href="#about">Nosotros</a></li>
-                    <li><a href="#contact">Contacto</a></li>
-                    <li><a href="#terms">Términos y Condiciones</a></li>
-                    <li><a href="#privacy">Política de Privacidad</a></li>
-                </ul>
-            </nav>
-            <div class="cta">
-                <a href="#contact" class="button">Contáctanos</a>
+
+    <div class="fixed-header">
+        <div class="logo">OBTÉN TU BONO SIN COMPLICACIONES</div>
+        <a href="https://wa.me/541127059302?text=Hola%21%20Me%20dar%C3%ADas%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" class="whatsapp-button-small-fixed whatsapp-cta-button" id="whatsappMainCta">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+    </div>
+
+    <main>
+        <section class="hero-cta-section">
+            <div class="container">
+                <h1>PANEL VIBRAS</h1>
+                <p>PLATAFORMA VERIFICADA</p>
+                <a href="https://wa.me/541127059302?text=Hola%21%20Me%20dar%C3%ADas%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" class="whatsapp-button whatsapp-cta-button" id="whatsappMainCta">
+                    <i class="fab fa-whatsapp"></i> CONTACTAR POR WHATSAPP
+                </a>
             </div>
-        </div>
-    </header>
+        </section>
 
-    <section id="hero">
-        <div class="container">
-            <h1>Innovación Tecnológica para tu Negocio</h1>
-            <p>En Aurora Tech Solutions transformamos tus ideas en soluciones digitales sostenibles.</p>
-            <a href="#services" class="button">Descubre más</a>
-        </div>
-    </section>
-
-    <section id="services">
-        <div class="container">
-            <h2>Nuestros Servicios</h2>
-            <div class="service-list">
-                <div class="service-item">
-                    <h3>Desarrollo de Software</h3>
-                    <p>Soluciones personalizadas que se adaptan a tus necesidades.</p>
-                </div>
-                <div class="service-item">
-                    <h3>Consultoría Tecnológica</h3>
-                    <p>Asesoría experta para optimizar tu infraestructura tecnológica.</p>
-                </div>
-                <div class="service-item">
-                    <h3>Inteligencia Artificial</h3>
-                    <p>Implementamos IA para potenciar tus operaciones.</p>
+        <section class="section benefits">
+            <div class="container">
+                <h2>¿POR QUÉ ELEGIRNOS?</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <i class="fas fa-hand-holding-usd"></i>
+                        <h3>Retiros Rápidos</h3>
+                        <p>Accede a tus ganancias al instante, sin esperas ni demoras.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-headset"></i>
+                        <h3>Soporte 24/7</h3>
+                        <p>Nuestro equipo está siempre disponible para ayudarte.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Seguridad Total</h3>
+                        <p>No pedimos ninguna información personal.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="about">
-        <div class="container">
-            <h2>Sobre Nosotros</h2>
-            <p>Desde 2015, hemos ayudado a más de 50 empresas en América Latina a alcanzar sus metas tecnológicas. Nuestro equipo está compuesto por expertos apasionados por la innovación.</p>
-        </div>
-    </section>
+        <section class="section testimonials">
+            <div class="container">
+                <h2>NUESTROS CLIENTES LO CONFIRMAN</h2>
+                <div class="data-point">
+                    <h3>+6,500</h3>
+                    <p>CLIENTES GANANDO DIARIAMENTE</p>
+                </div>
+                <div class="data-point">
+                    <div class="trustpilot-rating">
+                        <span>4.9/5</span>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <p>en Trustpilot</p>
+                    </div>
+                    <p>Calificación Verificada</p>
+                </div>
+            </div>
+        </section>
 
-    <section id="contact">
-        <div class="container">
-            <h2>Contacto</h2>
-            <p>¿Tienes un proyecto en mente? ¡Hablemos!</p>
-            <form>
-                <input type="text" name="name" placeholder="Tu nombre" required>
-                <input type="email" name="email" placeholder="Tu correo" required>
-                <textarea name="message" placeholder="Tu mensaje" required></textarea>
-                <button type="submit" class="button">Enviar</button>
-            </form>
-        </div>
-    </section>
-
-    <section id="terms">
-        <div class="container">
-            <h2>Términos y Condiciones</h2>
-            <p>Bienvenido a Aurora Tech ("nosotros", "nuestro", "la Empresa"). Al acceder a nuestro sitio web https://aurora-tech.netlify.app/ ("el Sitio") y utilizar nuestros servicios, aceptas estar sujeto a los siguientes Términos y Condiciones. Si no estás de acuerdo con alguno de estos términos, por favor no utilices nuestro Sitio.</p>
-            <h3>1. Uso del Sitio</h3>
-            <p>1.1. El contenido de este Sitio es para tu información general y uso personal. Está sujeto a cambios sin previo aviso.</p>
-            <p>1.2. No garantizamos que la información proporcionada en el Sitio sea completamente precisa, actualizada o libre de errores.</p>
-            <h3>2. Propiedad Intelectual</h3>
-            <p>Todos los derechos de propiedad intelectual, incluidos textos, imágenes, logotipos y otros materiales en el Sitio, pertenecen a Aurora Tech o a sus licenciantes. Está prohibida su reproducción sin nuestro consentimiento previo por escrito.</p>
-            <h3>3. Enlaces a Terceros</h3>
-            <p>Nuestro Sitio puede contener enlaces a sitios web de terceros. No somos responsables del contenido ni de las prácticas de privacidad de esos sitios.</p>
-            <h3>4. Uso de WhatsApp</h3>
-            <p>Al vincularte con nuestro número de WhatsApp, aceptas que la comunicación puede incluir el intercambio de información relacionada con nuestros servicios. Es tu responsabilidad asegurarte de que tu información sea precisa al contactarnos.</p>
-            <h3>5. Límites de Responsabilidad</h3>
-            <p>No seremos responsables por daños directos, indirectos o consecuentes que resulten del uso de nuestro Sitio o servicios.</p>
-            <h3>6. Modificaciones</h3>
-            <p>Nos reservamos el derecho de modificar estos Términos y Condiciones en cualquier momento. Te recomendamos revisar esta página periódicamente.</p>
-        </div>
-    </section>
-
-    <section id="privacy">
-        <div class="container">
-            <h2>Política de Privacidad</h2>
-            <p>Aurora Tech se compromete a proteger tu privacidad. Esta Política de Privacidad describe cómo recopilamos, utilizamos y protegemos tu información personal al visitar nuestro Sitio o interactuar con nosotros a través de WhatsApp.</p>
-            <h3>1. Información que Recopilamos</h3>
-            <p>1.1. Información personal: nombre, correo electrónico, número de teléfono y cualquier dato que proporciones al contactarnos.</p>
-            <p>1.2. Información no personal: dirección IP, tipo de navegador y datos de navegación en el Sitio.</p>
-            <h3>2. Uso de la Información</h3>
-            <p>Utilizamos tu información para:</p>
-            <ul>
-                <li>Proveer y mejorar nuestros servicios.</li>
-                <li>Responder a tus consultas y solicitudes.</li>
-                <li>Cumplir con obligaciones legales.</li>
-            </ul>
-            <h3>3. Divulgación de Información</h3>
-            <p>No compartimos tu información personal con terceros, excepto cuando sea necesario para cumplir con la ley o prestar nuestros servicios (por ejemplo, procesadores de pago o servicios de mensajería).</p>
-            <h3>4. Seguridad de la Información</h3>
-            <p>Implementamos medidas de seguridad razonables para proteger tu información personal contra accesos no autorizados, pérdidas o alteraciones.</p>
-            <h3>5. Cookies</h3>
-            <p>Utilizamos cookies para mejorar tu experiencia en nuestro Sitio. Puedes deshabilitarlas a través de la configuración de tu navegador.</p>
-            <h3>6. Derechos del Usuario</h3>
-            <p>Tienes derecho a:</p>
-            <ul>
-                <li>Acceder, corregir o eliminar tu información personal.</li>
-                <li>Retirar tu consentimiento para el tratamiento de tus datos.</li>
-                <li>Presentar una queja ante la autoridad de protección de datos correspondiente.</li>
-            </ul>
-            <h3>7. Modificaciones a esta Política</h3>
-            <p>Nos reservamos el derecho de actualizar esta Política de Privacidad en cualquier momento. Los cambios serán publicados en esta página.</p>
-            <h3>8. Contacto</h3>
-            <p>Si tienes alguna pregunta sobre esta Política de Privacidad, contáctanos a través de nuestro correo electrónico oficial o WhatsApp.</p>
-        </div>
-    </section>
+        <section class="section promotions">
+            <div class="container">
+                <h2>APROVECHA NUESTRO BONO</h2>
+                <div class="promo-item">
+                    <h3>BONO ACTIVO EXCLUSIVO</h3>
+                    <p>Recibe tu bono especial al contactar a nuestro equipo <b>vía WhatsApp</b>.</p>
+                    <a href="https://wa.me/541127059302?text=Hola%21%20Me%20dar%C3%ADas%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" class="whatsapp-button-small whatsapp-cta-button" id="whatsappMainCta">
+                        <i class="fab fa-whatsapp"></i> Obtener Bono Vía WhatsApp
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Aurora Tech Solutions. Todos los derechos reservados.</p>
-            <ul class="socials">
-                <li><a href="#">LinkedIn</a></li>
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">Twitter</a></li>
-            </ul>
+            <p>&copy; 2025 Plataforma de Panel Vibras. Todos los derechos reservados.</p>
         </div>
+    </footer>
+
+</body>
+</html>
+    </footer>
+
+</body>
+</html>
     </footer>
 </body>
 </html>
